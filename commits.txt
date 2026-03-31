@@ -4,3 +4,4 @@
 - [2026-03-30T09:21:40] added navbar component
 - [2026-03-30T17:45:12] fixed navbar spacing
 - [2026-03-30T23:10:05] updated sidebar ui
+- [2026-03-31T19:30:45] added lucide icons

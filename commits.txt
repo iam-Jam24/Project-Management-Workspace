@@ -5,3 +5,4 @@
 - [2026-03-30T17:45:12] fixed navbar spacing
 - [2026-03-30T23:10:05] updated sidebar ui
 - [2026-03-31T19:30:45] added lucide icons
+- [2026-04-01T11:05:18] updated homepage content

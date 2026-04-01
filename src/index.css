@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ─── Design System: Premium Synvex Espresso & Cream Theme ─── */
+:root {
+  /* Warm cream base background */
+  --background: #FCF8F2;
+  --surface: #1C1108;           /* Deep espresso dark chocolate for sidebar */
+  --card: #281A0E;              /* Rich chocolate brown for cards */
+  --card-hover: #332112;        /* Hover card state */
+  --elevated: #1F130A;          /* Deepest warm chocolate */
+
+  /* Default text variables (mapped inside containers) */
+  --text-primary: #FAF6F0;      /* Light cream for inside dark containers */
+  --text-secondary: #D29C6C;    /* Warm golden-peach for labels */
+  --text-muted: #8F7B6B;        /* Muted warm grey-brown */
+
+  /* Accent: Synvex Vibrant Orange-Coral Gradient Trigger */
+  --accent: #FF6F2E;
+  --accent-hover: #FF3E3E;
+  --accent-subtle: rgba(255, 111, 46, 0.1);
+  --accent-glow: rgba(255, 111, 46, 0.2);
+
+  /* Borders */
+  --border: rgba(210, 156, 108, 0.12);
+  --border-hover: rgba(255, 111, 46, 0.35);
+  --border-accent: rgba(255, 111, 46, 0.35);
+
+  /* Semantic colors */
+  --success: #10B981;
+  --success-subtle: rgba(16, 185, 129, 0.15);
+  --warning: #F59E0B;
+  --warning-subtle: rgba(245, 158, 11, 0.15);
+  --error: #EF4444;
+  --error-subtle: rgba(239, 68, 68, 0.15);
+  --info: #3B82F6;
+  --info-subtle: rgba(59, 130, 246, 0.15);
+
+  /* Shadows (ultra high-fidelity espresso soft shadows) */
+  --shadow-sm: 0 2px 4px rgba(31, 19, 10, 0.04);
+  --shadow-md: 0 6px 20px rgba(31, 19, 10, 0.12);
+  --shadow-lg: 0 16px 40px rgba(31, 19, 10, 0.18);
+  --shadow-glow: 0 0 20px rgba(255, 111, 46, 0.25);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Tailwind v4 Theme Mapping ─── */
+@theme {
+  --color-theme-bg: var(--background);
+  --color-theme-surface: var(--surface);
+  --color-theme-card: var(--card);
+  --color-theme-card-hover: var(--card-hover);
+  --color-theme-elevated: var(--elevated);
+  --color-theme-text: var(--text-primary);
+  --color-theme-text-sub: var(--text-secondary);
+  --color-theme-text-muted: var(--text-muted);
+  --color-theme-accent: var(--accent);
+  --color-theme-accent-hover: var(--accent-hover);
+  --color-theme-accent-subtle: var(--accent-subtle);
+  --color-theme-border: var(--border);
+  --color-theme-border-hover: var(--border-hover);
+  --color-theme-success: var(--success);
+  --color-theme-success-subtle: var(--success-subtle);
+  --color-theme-warning: var(--warning);
+  --color-theme-warning-subtle: var(--warning-subtle);
+  --color-theme-error: var(--error);
+  --color-theme-error-subtle: var(--error-subtle);
+  --color-theme-info: var(--info);
+  --color-theme-info-subtle: var(--info-subtle);
+}
+
+/* ─── Base Styles ─── */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background);
+  color: #1E120A; /* Espresso dark charcoal for standard page text on cream background */
+  line-height: 1.6;
+}
+
+/* ─── Scrollbar ─── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(210, 156, 108, 0.2);
+    border-radius: var(--radius-full);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 111, 46, 0.4);
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #1F130A;
+    border: 1.5px solid rgba(210, 156, 108, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    transition: all var(--transition-fast);
+  }
+  input[type="checkbox"]:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  input[type="checkbox"]:hover {
+    border-color: var(--border-hover);
+  }
+
+  /* Select dropdown styling */
+  select option {
+    background-color: var(--card);
+    color: var(--text-primary);
+  }
+}
+
+/* ─── High Contrast Context Model ─── */
+.text-theme-text {
+  color: #1E120A; /* Default to deep chocolate for elements on light background */
+}
+.text-theme-text-sub {
+  color: #5C524A; /* Darker sub-text for cream background */
+}
+.text-theme-text-muted {
+  color: #8A7E74; /* Darker muted text for cream background */
+}
+
+/* Force glowing light text inside cards, sidebar lists, and modals */
+.card, .card-elevated, aside, .modal, .dialog-content {
+  color: #FAF6F0 !important;
+}
+.card .text-theme-text,
+aside .text-theme-text,
+.dialog-content .text-theme-text {
+  color: #FAF6F0 !important;
+}
+.card .text-theme-text-sub,
+aside .text-theme-text-sub,
+.dialog-content .text-theme-text-sub {
+  color: #D29C6C !important;
+}
+.card .text-theme-text-muted,
+aside .text-theme-text-muted,
+.dialog-content .text-theme-text-muted {
+  color: #8F7B6B !important;
+}
+
+/* ─── Sidebar Highlights ─── */
+aside a.active {
+  background: linear-gradient(135deg, #FF6F2E, #FF3E3E) !important;
+  color: #FAF6F0 !important;
+  box-shadow: 0 4px 12px rgba(255, 111, 46, 0.25) !important;
+}
+
+/* ─── Utility Classes ─── */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  background-color: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #FF6F2E, #FF3E3E) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(255, 111, 46, 0.2) !important;
+  transition: all var(--transition-fast);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 111, 46, 0.35) !important;
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  border: 1px solid rgba(210, 156, 108, 0.3) !important;
+  color: #D29C6C !important;
+  transition: all var(--transition-fast);
+}
+.btn-secondary:hover {
+  border-color: var(--accent) !important;
+  color: #FFFDF9 !important;
+  background-color: rgba(210, 156, 108, 0.1) !important;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  background-color: #1F130A !important;
+  border: 1px solid rgba(210, 156, 108, 0.2) !important;
+  color: #FAF6F0 !important;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+.input-field::placeholder {
+  color: #8F7B6B;
+}
+.input-field:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(255, 111, 46, 0.15) !important;
+}
+
+/* Light background override for search bar input in Navbar */
+header .input-field,
+.glass .input-field {
+  background-color: #FFFFFF !important;
+  color: #1E120A !important;
+  border: 1px solid rgba(26, 21, 16, 0.08) !important;
+}
+header .input-field::placeholder {
+  color: #8A7E74 !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Gradient Backgrounds ─── */
+.gradient-glow {
+  position: relative;
+}
+.gradient-glow::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(226, 103, 20, 0.08) 0%, rgba(255, 230, 220, 0.04) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Glass Effect ─── */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+/* ─── Progress Bar Animation ─── */
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+/* ─── Skeleton loading ─── */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.skeleton {
+  background-color: var(--surface);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+/* ─── Premium Landing Page High Contrast Rules ─── */
+.min-h-screen.gradient-glow {
+  color: #1E120A !important;
+}
+.min-h-screen.gradient-glow h1,
+.min-h-screen.gradient-glow h2 {
+  color: #1E120A !important;
+}
+.min-h-screen.gradient-glow p:not(.card p, .card span, .card div) {
+  color: #5C524A !important;
+}
+header nav a {
+  color: #5C524A !important;
+  font-weight: 600 !important;
+}
+header nav a:hover {
+  color: #FF6F2E !important;
+}
+footer {
+  background-color: #FAF4EA !important;
+  border-top-color: rgba(26, 21, 16, 0.06) !important;
+}
+footer p {
+  color: #8A7E74 !important;
+}
+

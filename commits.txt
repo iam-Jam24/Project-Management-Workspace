@@ -7,3 +7,4 @@
 - [2026-03-31T19:30:45] added lucide icons
 - [2026-04-01T11:05:18] updated homepage content
 - [2026-04-01T20:15:33] improved responsive layout
+- [2026-04-02T08:45:10] created workspace dropdown

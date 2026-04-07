@@ -12,3 +12,4 @@
 - [2026-04-02T22:50:41] changed dashboard colors
 - [2026-04-06T10:30:15] setup redux store
 - [2026-04-06T18:15:22] added project slice
+- [2026-04-07T11:30:20] improved form validation errors

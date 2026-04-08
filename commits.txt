@@ -15,3 +15,4 @@
 - [2026-04-07T11:30:20] improved form validation errors
 - [2026-04-07T20:45:00] added task slice
 - [2026-04-08T09:12:35] wired up create project dialog
+- [2026-04-08T16:40:50] fixed workspace delete bug

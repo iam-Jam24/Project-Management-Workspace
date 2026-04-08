@@ -16,3 +16,4 @@
 - [2026-04-07T20:45:00] added task slice
 - [2026-04-08T09:12:35] wired up create project dialog
 - [2026-04-08T16:40:50] fixed workspace delete bug
+- [2026-04-08T23:35:10] added task creation form

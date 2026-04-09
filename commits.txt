@@ -18,3 +18,4 @@
 - [2026-04-08T16:40:50] fixed workspace delete bug
 - [2026-04-08T23:35:10] added task creation form
 - [2026-04-09T14:22:15] fixed modal alignment
+- [2026-04-09T21:10:44] improved card spacing

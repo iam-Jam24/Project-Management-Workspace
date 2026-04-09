@@ -17,3 +17,4 @@
 - [2026-04-08T09:12:35] wired up create project dialog
 - [2026-04-08T16:40:50] fixed workspace delete bug
 - [2026-04-08T23:35:10] added task creation form
+- [2026-04-09T14:22:15] fixed modal alignment

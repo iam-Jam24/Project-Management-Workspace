@@ -20,3 +20,4 @@
 - [2026-04-09T14:22:15] fixed modal alignment
 - [2026-04-09T21:10:44] improved card spacing
 - [2026-04-10T16:05:12] updated login page ui
+- [2026-04-10T21:40:15] added react hot toast alerts

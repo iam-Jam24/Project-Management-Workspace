@@ -22,3 +22,4 @@
 - [2026-04-10T16:05:12] updated login page ui
 - [2026-04-10T21:40:15] added react hot toast alerts
 - [2026-04-14T11:50:33] added team member list
+- [2026-04-14T19:40:12] updated invite dialog modal

@@ -21,3 +21,4 @@
 - [2026-04-09T21:10:44] improved card spacing
 - [2026-04-10T16:05:12] updated login page ui
 - [2026-04-10T21:40:15] added react hot toast alerts
+- [2026-04-14T11:50:33] added team member list

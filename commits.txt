@@ -26,3 +26,4 @@
 - [2026-04-15T10:10:15] fixed duplicate team member bug
 - [2026-04-15T15:30:22] added task status board
 - [2026-04-15T22:15:50] updated kanban section
+- [2026-04-16T10:05:12] added project filter buttons

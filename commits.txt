@@ -30,3 +30,4 @@
 - [2026-04-16T18:25:40] improved drag drop states
 - [2026-04-17T09:40:11] added circular progress bar
 - [2026-04-17T21:55:03] fixed progress bar calculation
+- [2026-04-18T14:10:30] small css spacing fixes

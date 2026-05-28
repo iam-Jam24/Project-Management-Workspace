@@ -75,11 +75,13 @@ export default function StatsGrid() {
     return (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-8">
             {statCards.map(
-                ({ icon: Icon, title, value, subtitle, accentColor, bgColor }, i) => (
-                    <div
-                        key={i}
-                        className="card p-5 group hover:border-theme-border-hover"
-                    >
+                ({ icon, title, value, subtitle, accentColor, bgColor }, i) => {
+                    const Icon = icon;
+                    return (
+                        <div
+                            key={i}
+                            className="card p-5 group hover:border-theme-border-hover"
+                        >
                         <div className="flex items-start justify-between">
                             <div>
                                 <p className="text-xs text-theme-text-muted font-medium uppercase tracking-wider mb-2">
@@ -97,8 +99,9 @@ export default function StatsGrid() {
                             </div>
                         </div>
                     </div>
-                )
-            )}
+                );
+            }
+        )}
         </div>
     );
 }

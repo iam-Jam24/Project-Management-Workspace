@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, Calendar, Shield, Users, Zap, Check, Star } from "lucide-react";
-import { assets } from "../assets/assets";
 
 const LandingPage = () => {
     const features = [
